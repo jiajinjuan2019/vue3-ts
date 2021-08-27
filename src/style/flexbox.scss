@@ -1,0 +1,49 @@
+// 样式私有文件 仅供个人使用  请勿修改
+.rowbox {
+    display: flex;
+    flex-direction: row;
+}
+
+.colbox {
+    display: flex;
+    flex-direction: column;
+}
+
+.flex {
+    flex: 1;
+}
+
+.startbox {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+.endbox {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    align-items: center;
+}
+
+.centerbox {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+
+.betweenbox {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.aroundbox {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+}
