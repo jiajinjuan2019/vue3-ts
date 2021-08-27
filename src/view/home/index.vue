@@ -14,6 +14,10 @@
         <div class="vue3pie">
           <vue3pie/>
         </div>
+        <!-- element -->
+        <div class="elementsele">
+          <eleSelect/>
+        </div>
       </div>
       <div class="two"></div>
       <div class="three"></div>
@@ -24,10 +28,12 @@
 import { reactive, ref } from "vue";
 import leftNav from "../../components/leftBav.vue";
 import vue3pie from './module/vue3pie/index.vue'
+import eleSelect from './module/eleSelect.vue'
 export default {
   components: {
     leftNav,
-    vue3pie
+    vue3pie,
+    eleSelect
   },
   setup() {
     let isShowNav = ref(false);
@@ -64,6 +70,7 @@ export default {
     width: 100%;
     height: 100%;
     display: flex;
+    margin: 20px;
     .one{
       width: 40%;
       height: 100%;
