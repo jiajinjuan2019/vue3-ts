@@ -6,7 +6,7 @@ axios.defaults.headers['Content-Type'] = 'application/json;charset=utf-8'
 const instance = axios.create({
     baseURL: import.meta.env.VITE_APP_BASE_API + '',
     timeout: 6000,
-    // withCredentials: true,
+    withCredentials: true,
 });
 
 // 添加请求拦截器

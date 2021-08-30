@@ -2,9 +2,9 @@
   <!--vue3.0和Ts的模板 -->
   <div class="home">
     <!-- 左侧菜单 -->
-    <div class="home-leftnav centerbox" @mouseleave="isShowNav = false">
+    <div class="home-leftnav centerbox" v-show="isShowNav" @mouseleave="isShowNav = false">
       <transition name="slide-fade">
-        <leftNav v-show="isShowNav" />
+        <leftNav />
       </transition>
     </div>
     <div class="left-line" @mouseenter="toggleIsNav"></div>
@@ -66,8 +66,7 @@ export default {
     width: 345px;
     height: 100%;
     position: absolute;
-    left: -345px;
-    transform: translateX(-345px);
+    transform: translateX(0px);
     z-index: 2;
   }
   .home-content {
