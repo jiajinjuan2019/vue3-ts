@@ -16,7 +16,7 @@
 </template>
 <script lang="ts">
 import { ref } from "vue";
-import instance from "../../../utils/request";
+import request  from '../../../utils/request'
 export default {
   setup() {
     let options = [
@@ -42,16 +42,18 @@ export default {
         label: "北京烤鸭",
       },
     ];
+    let $fetch = request.feach
+    let $instance = request.instance
     let value = ref("选项1");
     function getRequestData() {
       console.log('基本接口配置');
-      instance.get("/mock/70/home/jjbj").then((res) => {
+      $fetch.get("/mock/70/home/jjbj").then((res) => {
         console.log(111111, res);
       });
     }
     function getRequestData2() {
       console.log('跨域接口配置');
-      instance.get("/api/warning/number").then((res) => {
+      $instance.get("/api/warning/number").then((res) => {
         console.log(111111, res);
       });
     }
