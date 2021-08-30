@@ -10,21 +10,23 @@
       >
       </el-option>
     </el-select>
+    <button @click="getRequestData">请求接口</button>
   </div>
 </template>
 <script lang="ts">
 import { ref } from "vue";
+import instance from "../../../utils/request";
 export default {
   setup() {
-    let options= [
+    let options = [
       {
         value: "选项1",
-        label: "黄金糕"
+        label: "黄金糕",
       },
       {
         value: "选项2",
         label: "双皮奶",
-        disabled: true
+        disabled: true,
       },
       {
         value: "选项3",
@@ -36,14 +38,20 @@ export default {
       },
       {
         value: "选项5",
-        label: "北京烤鸭"
-      }
+        label: "北京烤鸭",
+      },
     ];
     let value = ref("选项1");
+    function getRequestData() {
+      console.log(22222);
+      instance.get("/mock/70/home/jjbj").then((res) => {
+        console.log(111111, res);
+      });
+    }
     return {
-     options,
-      value
-      
+      options,
+      value,
+      getRequestData,
     };
   },
 };

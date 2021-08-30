@@ -60,17 +60,22 @@ export default {
     position: absolute;
     top: 40%;
     left: 0;
+    z-index: 2;
   }
   .home-leftnav {
     width: 345px;
     height: 100%;
     position: absolute;
+    left: -345px;
+    transform: translateX(-345px);
+    z-index: 2;
   }
   .home-content {
     width: 100%;
     height: 100%;
     display: flex;
     margin: 20px;
+    z-index: 3;
     .one{
       width: 40%;
       height: 100%;
