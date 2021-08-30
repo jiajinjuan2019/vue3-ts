@@ -11,6 +11,7 @@
       </el-option>
     </el-select>
     <button @click="getRequestData">请求接口</button>
+    <button @click="getRequestData2">跨域接口</button>
   </div>
 </template>
 <script lang="ts">
@@ -43,8 +44,14 @@ export default {
     ];
     let value = ref("选项1");
     function getRequestData() {
-      console.log(22222);
+      console.log('基本接口配置');
       instance.get("/mock/70/home/jjbj").then((res) => {
+        console.log(111111, res);
+      });
+    }
+    function getRequestData2() {
+      console.log('跨域接口配置');
+      instance.get("/api/warning/number").then((res) => {
         console.log(111111, res);
       });
     }
@@ -52,6 +59,7 @@ export default {
       options,
       value,
       getRequestData,
+      getRequestData2
     };
   },
 };
