@@ -2,6 +2,7 @@ import { createApp } from 'vue'
 import App from './App.vue'
 import '../src/style/flexbox.scss'
 import 'echarts';
+import router from './router';
 import request from './utils/request';
 import VChart from "vue-echarts";
 import ElementPlus from 'element-plus'
@@ -13,4 +14,5 @@ app.config.globalProperties.$fetch =request.feach
 app.config.globalProperties.$instance = request.instance
 app.component('v-chart', VChart)
 app.use(ElementPlus)
+app.use(router)
 app.mount('#app')
