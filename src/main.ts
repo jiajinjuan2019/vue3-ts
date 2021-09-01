@@ -7,6 +7,7 @@ import request from './utils/request';
 import VChart from "vue-echarts";
 import ElementPlus from 'element-plus'
 import 'element-plus/dist/index.css'
+import '../src/view/cssCompoment/index.scss'
 
 const app = createApp(App)
 console.log(app)
